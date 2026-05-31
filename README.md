@@ -1,22 +1,11 @@
-# 🚀 GenAI Resume Analyzer
+# GenAI Resume Analyzer
 
-## 📌 Overview
-GenAI Resume Analyzer is an AI-powered ATS-style resume screening system that evaluates candidates against job descriptions using Large Language Models.
+## Overview
+An AI-powered application that analyzes resumes and provides actionable feedback to improve ATS compatibility and overall quality.
 
-## 🌐 Live Demo
+## Key Features
 
-### Frontend (Netlify)
-https://genai-resume-analyzer.netlify.app
-
-### Backend API (Render)
-https://genai-resume-analyzer-3yll.onrender.com
-
-### API Docs (Swagger)
-https://genai-resume-analyzer-3yll.onrender.com/docs
-
-## 🔥 Key Features
-
-### 🌐 Web UI Mode
+### Web UI Mode
 Users can:
 
 - Upload Resume PDF
@@ -32,11 +21,6 @@ Users can:
 
 ---
 
-The system supports both:
-
-✅ Web UI (React + FastAPI)  
-✅ Batch / Command Line Mode (Multiple resumes)
-
 It performs:
 
 - Resume parsing from PDF
@@ -49,11 +33,10 @@ It performs:
 
 ---
 
-# ⚙️ Tech Stack
+# Tech Stack
 
 ## Frontend
-- React (Vite)
-- Axios
+- React.js
 
 ## Backend
 - FastAPI
@@ -62,25 +45,24 @@ It performs:
 ## AI / LLM
 - LangChain
 - Groq (LLaMA 3.3)
-- LangSmith
 
 ## PDF Processing
 - PyPDF
 
 ---
 
-# 🧠 Features
+# Features
 
-## ✅ Dynamic Resume Analysis
+## Dynamic Resume Analysis
 Upload a PDF resume and paste any Job Description for analysis.
 
-## ✅ Skill Matching
+## Skill Matching
 Detects:
 
 - Matched Skills
 - Missing Skills
 
-## ✅ Hybrid Candidate Scoring
+## Hybrid Candidate Scoring
 Generates realistic candidate score:
 
 0–100
@@ -90,18 +72,18 @@ Based on:
 - Experience
 - Penalties for skill gaps
 
-## ✅ Candidate Classification
+## Candidate Classification
 - STRONG
 - AVERAGE
 - WEAK
 
-## ✅ Explainable AI
+## Explainable AI
 Returns:
 - Strengths
 - Weaknesses
 - Recommendation
 
-## ✅ Batch Processing (CLI)
+## Batch Processing (CLI)
 Add multiple resumes into:
 
 ```text
@@ -116,12 +98,12 @@ python main.py
 
 Automatically evaluates all resumes.
 
-## ✅ Web UI
+## Web UI
 Upload Resume + Paste Job Description + Analyze instantly.
 
 ---
 
-# 🔄 Architecture
+# Architecture
 
 ```text
 Resume PDF
@@ -137,125 +119,7 @@ Explanation
 UI / CLI Output
 ```
 
----
-
-
-# 🚀 Installation
-
-## 1 Clone Repository
-
-```bash
-git clone https://github.com/yourusername/GenAI-Resume-Analyzer.git
-
-cd GenAI-Resume-Analyzer
-```
-
----
-
-## 2 Backend Setup
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 3 Create .env
-
-```env
-GROQ_API_KEY=your_groq_key
-
-LANGCHAIN_API_KEY=your_langsmith_key
-
-LANGCHAIN_TRACING_V2=true
-
-LANGCHAIN_PROJECT=resume-screening
-```
-
----
-
-# 🖥 Run Backend API
-
-```bash
-uvicorn main:app --reload
-```
-
-Backend runs:
-
-```text
-http://127.0.0.1:8000
-```
-
-Swagger:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
----
-
-# 🎨 Frontend Setup
-
-Move to frontend:
-
-```bash
-cd ai-resume-ui
-```
-
-Install:
-
-```bash
-npm install
-```
-
-Run React:
-
-```bash
-npm run dev
-```
-
-Frontend:
-
-```text
-http://localhost:5173
-```
-
----
-
-# 📦 Command Line Mode (Batch Processing)
-
-Add resumes into:
-
-```text
-resumes/
-```
-
-Run:
-
-```bash
-python main.py
-```
-
-Example:
-
-```text
-Resume: Aaryan Resume.pdf
-
-Score: 85
-
-Category: STRONG
-```
-
----
-
-# 🌐 Web UI Usage
+# Web UI Usage
 
 1. Upload Resume PDF
 
@@ -273,7 +137,7 @@ Category: STRONG
 
 ---
 
-# 📊 Sample API Response
+# Sample API Response
 
 ```json
 {
@@ -292,32 +156,10 @@ Category: STRONG
 
 ---
 
-# 📈 Scoring Logic
+# Scoring Logic
 
 | Factor | Weight |
 |--------|--------|
 | Skill Match | 60% |
 | Experience | 30% |
 | Penalties | Applied |
-
----
-
-# 🔥 Usage Modes
-
-## Mode 1 — Web Application
-React UI + FastAPI
-
-## Mode 2 — Command Line
-Batch screening using:
-
-```bash
-python main.py
-```
-
----
-
-# 🚀 Future Improvements
-- Multi-candidate ranking dashboard
-- Resume history / archives
-- Deployment (Vercel + Render)
-- Full ATS dashboard
